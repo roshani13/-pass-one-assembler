@@ -1,0 +1,32 @@
+	******************SYMBOL TABLE********************
+lineno	address		symbol	size	totals	type	value
+2	00000000	a	4	4	dd	['10']
+3	00000004	b	4	4	dd	['20']
+4	00000008	c	4	4	dd	['30']
+5	0000000C	d	4	4	dd	['50']
+6	00000014	msg2	1	5	db	PUCSD
+
+
+Address  	Instruction		Original
+
+00000000	8C reg1,sym#2		mov eax,a
+00000005	8C reg4,sym#3		mov edx,b
+0000000A	8B reg1,reg2		mov eax,ebx
+0000000C	05 reg1,sym#2		add eax,a
+00000011	05 reg2,sym#3		add ebx,b
+00000016	8C reg3,lit0		mov ecx,12
+0000001B	8C reg1,lit1		mov eax,14
+00000020	8C reg4,lit0		mov edx,12
+00000025	8C reg1,lit2		mov eax,13
+0000002A	8C reg1,lit3		mov eax,'a'
+0000002F	8A reg17,lit4		mov al,'z'
+
+
+	******************LITERAL TABLE********************
+Literal_no	Literal	LIteral(in hex)
+
+0		12	0xc
+1		14	0xe
+2		13	0xd
+3		a	0x61
+4		z	0x7a
